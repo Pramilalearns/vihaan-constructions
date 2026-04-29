@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vihaan Constructions — Building Homes With Trust</title>
+    <meta name="description" content="We build modern, durable, and affordable homes with a strong focus on quality, transparency, and customer satisfaction.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+                    <nav id="navbar" style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 5%; height: 90px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0, 45, 98, 0.1);">
+        <a href="index.html" class="logo" style="justify-self: start;">
+            <img src="assets/logo/main-logo.png" alt="Vihaan Constructions" class="nav-logo">
+        </a>
+        <ul class="nav-links" style="justify-self: center; display: flex; gap: 2.5rem; list-style: none; margin: 0; padding: 0;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="services.html" style="display:flex; align-items:center; gap:5px;">Services 
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="services.html#residential">Residential</a></li>
+                    <li><a href="services.html#commercial">Commercial</a></li>
+                    <li><a href="services.html#interior">Interior Design</a></li>
+                    <li><a href="services.html#renovation">Renovation</a></li>
+                </ul>
+            </li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+        <div class="nav-actions" style="justify-self: end; display: flex; align-items: center; gap: 1.5rem;">
+            <a href="tel:+918148410102" class="nav-phone" style="font-weight: 700; color: var(--blue-dark); text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                +91 81484 10102
+            </a>
+            <a href="contact.html" class="btn-action btn-primary nav-cta" style="padding: 0.6rem 1.5rem !important;">Get a Quote</a>
+        </div>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="tel:+918148410102">Call: +91 81484 10102</a>
+        <a href="contact.html">Get a Quote</a>
+    </div>
+    
+    
+
+    <!-- ==================== 1. HERO ==================== -->
+    <section class="hero-split">
+        <div class="hero-left reveal">
+            <div class="hero-tag">Master Builders of Tamil Nadu</div>
+            <h1 class="hero-title" style="font-size: clamp(2rem, 3.5vw, 3rem);">Building Homes With Trust, Quality &<br><span>Modern Construction Expertise.</span></h1>
+            <p class="hero-desc">We build modern, durable, and affordable homes with a strong focus on quality, transparency, and customer satisfaction, using the right construction approach based on your project needs and budget.</p>
+            <div class="hero-actions">
+                <a href="#enquiry" class="btn-action btn-primary">Get Free Consultation</a>
+                <a href="projects.html" class="btn-action btn-secondary">View Our Projects</a>
+            </div>
+            
+        </div>
+        
+        <div class="hero-right reveal">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000" alt="Modern Architecture" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Hero Highlights (Full Width Banner) -->
+        <div class="hero-highlights-banner">
+            <div class="hero-highlights-banner-inner">
+                <div class="highlight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Starting From ₹1775/sq. ft.</div>
+                <div class="highlight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> Spacious Room Designs</div>
+                <div class="highlight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Strong & Durable Build</div>
+                <div class="highlight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> ISO Certified Materials</div>
+                <div class="highlight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> Free 2D Elevation Design</div>
+                <div class="highlight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> Live Site Monitoring</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 2. TRUSTED PARTNERS ==================== -->
+    <section class="partners-section">
+        <div class="partners-layout">
+            <div class="partners-title-container">
+                <h3 class="partners-title">Premium Materials</h3>
+            </div>
+            <div class="partners-marquee-container">
+                <div class="partners-marquee">
+                    <div class="partner-logo">ARS Steel</div>
+                    <div class="partner-logo">Meenakshi Steel</div>
+                    <div class="partner-logo">Dalmia</div>
+                    <div class="partner-logo">UltraTech</div>
+                    <div class="partner-logo">Ramco</div>
+                    <div class="partner-logo">Parryware</div>
+                    <div class="partner-logo">Finolex</div>
+                    <div class="partner-logo">Havells</div>
+                    <div class="partner-logo">Kajaria</div>
+                    <div class="partner-logo">Symphony</div>
+                    <div class="partner-logo">Asian Paints</div>
+                    <div class="partner-logo">Birla Opus</div>
+                    <div class="partner-logo">Saint-Gobain</div>
+                    <div class="partner-logo">Godrej</div>
+                    <div class="partner-logo">Epco</div>
+                    <div class="partner-logo">Dr. Fixit</div>
+                    <div class="partner-logo">Sharon Ply</div>
+                    <div class="partner-logo">Greenply</div>
+                    <div class="partner-logo">CenturyPly</div>
+                    
+                    <!-- Duplicated for infinite scroll effect -->
+                    <div class="partner-logo">ARS Steel</div>
+                    <div class="partner-logo">Meenakshi Steel</div>
+                    <div class="partner-logo">Dalmia</div>
+                    <div class="partner-logo">UltraTech</div>
+                    <div class="partner-logo">Ramco</div>
+                    <div class="partner-logo">Parryware</div>
+                    <div class="partner-logo">Finolex</div>
+                    <div class="partner-logo">Havells</div>
+                    <div class="partner-logo">Kajaria</div>
+                    <div class="partner-logo">Symphony</div>
+                    <div class="partner-logo">Asian Paints</div>
+                    <div class="partner-logo">Birla Opus</div>
+                    <div class="partner-logo">Saint-Gobain</div>
+                    <div class="partner-logo">Godrej</div>
+                    <div class="partner-logo">Epco</div>
+                    <div class="partner-logo">Dr. Fixit</div>
+                    <div class="partner-logo">Sharon Ply</div>
+                    <div class="partner-logo">Greenply</div>
+                    <div class="partner-logo">CenturyPly</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 3. ABOUT US ==================== -->
+    <section class="about-section" id="about" style="position: relative; overflow: hidden; padding: 8rem 5%;">
+        
+        <!-- Massive decorative background number -->
+        <div style="position: absolute; top: -5%; left: 40%; font-size: 40rem; font-weight: 900; color: rgba(0,45,98,0.02); line-height: 1; z-index: 0; pointer-events: none; user-select: none;">10+</div>
+
+        <!-- 1. Editorial Visuals & Founder Profile -->
+        <div class="about-editorial-grid reveal">
+            
+            <!-- LEFT: Modern overlapping image composition -->
+            <div class="about-visuals" style="position: relative;">
+                <div class="image-wrapper" style="position: relative; display: flex; justify-content: center; align-items: center;">
+                    <img src="assets/images/founder.png" alt="Er. Vijayakumar M" style="width: 100%; max-width: 500px; height: auto; display: block; object-fit: contain; position: relative; z-index: 1;">
+                </div>
+                
+                <!-- Floating Glass Card Overlapping the Image -->
+                <div class="floating-experience glass-card" style="position: absolute; bottom: -30px; right: -40px; padding: 2rem; border-radius: 20px; border-left: 5px solid var(--green-action); z-index: 2; box-shadow: 0 25px 50px rgba(0,45,98,0.15);">
+                    <div style="font-size: 3.5rem; font-weight: 900; color: var(--blue-dark); line-height: 1;">10<span style="color: var(--green-action)">+</span></div>
+                    <div style="font-size: 0.85rem; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Years of Excellence</div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Flowing Company Narrative & Chips -->
+            <div class="about-editorial" style="padding-top: 2rem;">
+                <div class="section-tag" style="margin-bottom: 1.5rem;">Who We Are</div>
+                <h2 class="section-title" style="font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 2rem; color: var(--blue-dark);">Building Homes With <span style="color: var(--green-action);">Trust</span> & <span style="color: var(--blue-primary);">Quality</span>.</h2>
+                
+                <p class="text-muted" style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 1rem;">Vihaan Constructions is a modern construction company focused on delivering durable, affordable, and aesthetically designed homes. We prioritize clear communication, transparent pricing, quality materials, and timely project completion.</p>
+                
+                <p class="font-bold" style="font-size: 1.15rem; color: var(--blue-dark); line-height: 1.6; margin-bottom: 3rem;">Our goal is simple: to make quality home construction accessible for all without compromising on strength, safety, or design.</p>
+                
+                <!-- Transform bullet points into premium modern SaaS chips -->
+                <h3 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); font-weight: 700; margin-bottom: 1.5rem;">Why Families Choose Vihaan</h3>
+                <div class="benefits-chips" style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 4rem;">
+                    <span class="benefit-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green-action)" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Faster Completion</span>
+                    <span class="benefit-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green-action)" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Cost-effective</span>
+                    <span class="benefit-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green-action)" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Minimal Waste</span>
+                    <span class="benefit-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green-action)" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Elegant Designs</span>
+                    <span class="benefit-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green-action)" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Structured Execution</span>
+                    <span class="benefit-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green-action)" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Customer First</span>
+                </div>
+
+                <!-- Editorial Founder Integration -->
+                <div class="founder-intro" style="position: relative; padding-left: 2.5rem;">
+                    <div style="position: absolute; top: -30px; left: -10px; font-size: 6rem; color: rgba(126,217,87,0.2); font-family: Georgia, serif; line-height: 1; pointer-events: none;">"</div>
+                    
+                    <p style="font-size: 1.35rem; color: var(--blue-dark); font-style: italic; font-weight: 600; line-height: 1.6; margin-bottom: 2rem; position: relative; z-index: 1;">To me, creating a space is about more than just materials. It is about a process built on clear communication and quality that lasts from the initial vision to the final walkthrough.</p>
+                    
+                    <div style="display: flex; align-items: center; gap: 1.5rem;">
+                        <div style="width: 50px; height: 3px; background: var(--green-action);"></div>
+                        <div>
+                            <h4 style="font-size: 1.3rem; color: var(--blue-dark); font-weight: 900; margin-bottom: 0.2rem;">Er. Vijayakumar M</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; margin: 0;">Founder & Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section" id="services">
+        <div class="services-bg-text">Engineering</div>
+        
+        <div class="services-header reveal" style="text-align: left; margin-bottom: 6rem; position: relative; z-index: 2;">
+            <div class="section-tag" style="margin-left: 0;">Our Capabilities</div>
+            <h2 class="section-title" style="font-size: 4rem; max-width: 800px;">Precision Construction & <span style="color: var(--blue-primary);">Modern Engineering</span></h2>
+            <p style="font-size: 1.2rem; color: var(--blue-dark); opacity: 0.85; font-weight: 500; max-width: 600px;">We blend traditional craftsmanship with advanced engineering to build structures that stand the test of time.</p>
+        </div>
+        
+        <div class="services-grid reveal">
+            <!-- 01 Residential -->
+            <div class="tech-card">
+                <div class="tech-marker marker-tl"></div>
+                <div class="tech-marker marker-br"></div>
+                <div class="tech-coords">12° 58' 40" N</div>
+                
+                <div class="tech-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1000" alt="Residential Buildings" class="tech-img">
+                </div>
+                
+                <div class="tech-content">
+                    <span class="tech-num">01 / CORE</span>
+                    <h3 class="svc-title">Residential Buildings</h3>
+                    <p class="svc-desc">From luxury independent villas to modern high-end apartments, we specialize in creating spaces that redefine modern living.</p>
+                    <div class="tech-line"></div>
+                </div>
+            </div>
+
+            <!-- 02 Commercial -->
+            <div class="tech-card">
+                <div class="tech-marker marker-tl"></div>
+                <div class="tech-marker marker-br"></div>
+                <div class="tech-coords">77° 35' 48" E</div>
+                
+                <div class="tech-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000" alt="Commercial Complexes" class="tech-img">
+                </div>
+                
+                <div class="tech-content">
+                    <span class="tech-num">02 / STRUCTURE</span>
+                    <h3 class="svc-title">Commercial Complexes</h3>
+                    <p class="svc-desc">Optimized commercial spaces designed for high-traffic functionality and structural durability for growing businesses.</p>
+                    <div class="tech-line"></div>
+                </div>
+            </div>
+
+            <!-- 03 Institutional -->
+            <div class="tech-card">
+                <div class="tech-marker marker-tl"></div>
+                <div class="tech-marker marker-br"></div>
+                <div class="tech-coords">REF: BK-2026</div>
+                
+                <div class="tech-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?auto=format&fit=crop&q=80&w=1000" alt="Institutional Buildings" class="tech-img">
+                </div>
+                
+                <div class="tech-content">
+                    <span class="tech-num">03 / INFRA</span>
+                    <h3 class="svc-title">Institutional Buildings</h3>
+                    <p class="svc-desc">Specialized infrastructure for educational and public institutions focusing on safety, space, and long-term sustainability.</p>
+                    <div class="tech-line"></div>
+                </div>
+            </div>
+
+            <!-- 04 Farm Houses -->
+            <div class="tech-card">
+                <div class="tech-marker marker-tl"></div>
+                <div class="tech-marker marker-br"></div>
+                <div class="tech-coords">ENV: 0.85 SF</div>
+                
+                <div class="tech-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000" alt="Bespoke Farm Houses" class="tech-img">
+                </div>
+                
+                <div class="tech-content">
+                    <span class="tech-num">04 / LIFESTYLE</span>
+                    <h3 class="svc-title">Bespoke Farm Houses</h3>
+                    <p class="svc-desc">Combining rustic charm with modern amenities, our farm houses are designed for tranquility and nature integration.</p>
+                    <div class="tech-line"></div>
+                </div>
+            </div>
+
+            <!-- 05 Interior -->
+            <div class="tech-card">
+                <div class="tech-marker marker-tl"></div>
+                <div class="tech-marker marker-br"></div>
+                <div class="tech-coords">VIS: 4K RES</div>
+                
+                <div class="tech-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1000" alt="Interior Solutions" class="tech-img">
+                </div>
+                
+                <div class="tech-content">
+                    <span class="tech-num">05 / FINISH</span>
+                    <h3 class="svc-title">Interior Solutions</h3>
+                    <p class="svc-desc">High-end interior design and execution that transforms bare shells into immersive, functional living environments.</p>
+                    <div class="tech-line"></div>
+                </div>
+            </div>
+
+            <!-- 06 Custom -->
+            <div class="tech-card" style="background: var(--blue-dark); color: white;">
+                <div class="tech-marker marker-tl" style="border-color: var(--green-action);"></div>
+                <div class="tech-marker marker-br" style="border-color: var(--green-action);"></div>
+                
+                <div class="tech-content" style="padding: 4rem 2rem; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                    <span class="tech-num" style="color: var(--green-action);">06 / PROJECT</span>
+                    <h3 class="svc-title" style="color: white; font-size: 2.5rem;">Have a Custom Project?</h3>
+                    <p class="svc-desc" style="color: rgba(255,255,255,0.7);">Our engineering team is ready to tackle unique structural challenges. Let's discuss your specific needs.</p>
+                    <a href="#enquiry" class="btn-action btn-primary" style="align-self: flex-start; margin-top: 1rem;">Get Consultation</a>
+                    <div class="tech-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 7. PORTFOLIO ==================== -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="reveal" style="text-align: center; margin-bottom: 5rem;">
+            <div class="section-tag">Our Works</div>
+            <h2 class="section-title" style="font-size: 3.5rem;">Beautiful Homes We've Built</h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 700px; margin: 1.5rem auto 0; font-weight: 500;">Explore some of the independent houses and residential projects completed by Vihaan Constructions.</p>
+        </div>
+        <div class="portfolio-grid grid-cols-3">
+            <!-- 1: RP Residency -->
+            <a href="projects.html#rp-residency" class="portfolio-item reveal">
+                <img src="assets/images/rp-residency.jpeg" alt="RP Residency" class="portfolio-img">
+                <div class="portfolio-status-box">
+                    <div class="status-badge completed">Completed</div>
+                    <div class="learn-more-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </div>
+                <div class="portfolio-overlay">
+                    <h3 class="portfolio-name">RP Residency</h3>
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <p class="portfolio-cat">Full Construction & Interior</p>
+                        <span style="width: 4px; height: 4px; background: var(--green-action); border-radius: 50%;"></span>
+                        <p class="portfolio-cat" style="color: white; opacity: 0.8;">Chennai</p>
+                    </div>
+                </div>
+            </a>
+            <!-- 2: Gnaneshwar Villa -->
+            <a href="projects.html#gnaneshwar-villa" class="portfolio-item reveal" style="transition-delay: 0.1s;">
+                <img src="assets/images/gnaneshwar-villa.jpeg" alt="Gnaneshwar Villa" class="portfolio-img">
+                <div class="portfolio-status-box">
+                    <div class="status-badge completed">Completed</div>
+                    <div class="learn-more-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </div>
+                <div class="portfolio-overlay">
+                    <h3 class="portfolio-name">Gnaneshwar Villa</h3>
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <p class="portfolio-cat">Wood Work</p>
+                        <span style="width: 4px; height: 4px; background: var(--green-action); border-radius: 50%;"></span>
+                        <p class="portfolio-cat" style="color: white; opacity: 0.8;">Bangalore</p>
+                    </div>
+                </div>
+            </a>
+            <!-- 3: Anil Residency -->
+            <a href="projects.html#anil-residency" class="portfolio-item reveal" style="transition-delay: 0.2s;">
+                <img src="assets/images/anil-residency.jpeg" alt="Anil Residency" class="portfolio-img" style="object-position: right center;">
+                <div class="portfolio-status-box">
+                    <div class="status-badge completed">Completed</div>
+                    <div class="learn-more-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </div>
+                <div class="portfolio-overlay">
+                    <h3 class="portfolio-name">Anil Residency</h3>
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <p class="portfolio-cat">Interior Design</p>
+                        <span style="width: 4px; height: 4px; background: var(--green-action); border-radius: 50%;"></span>
+                        <p class="portfolio-cat" style="color: white; opacity: 0.8;">Trivandrum</p>
+                    </div>
+                </div>
+            </a>
+            <!-- 4: Brijith Residency -->
+            <a href="projects.html#brijith-residency" class="portfolio-item reveal" style="transition-delay: 0.3s;">
+                <img src="assets/images/brijith-residency.jpeg" alt="Brijith Residency" class="portfolio-img" style="object-position: center top;">
+                <div class="portfolio-status-box">
+                    <div class="status-badge completed">Completed</div>
+                    <div class="learn-more-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </div>
+                <div class="portfolio-overlay">
+                    <h3 class="portfolio-name">Brijith Residency</h3>
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <p class="portfolio-cat">Full Construction</p>
+                        <span style="width: 4px; height: 4px; background: var(--green-action); border-radius: 50%;"></span>
+                        <p class="portfolio-cat" style="color: white; opacity: 0.8;">Tenkasi</p>
+                    </div>
+                </div>
+            </a>
+            <!-- 5: Adhira Beauty Parlour -->
+            <a href="projects.html#adhira-beauty" class="portfolio-item reveal" style="transition-delay: 0.4s;">
+                <img src="assets/images/projects/Adhira/1.png" alt="Adhira Beauty Parlour" class="portfolio-img">
+                <div class="portfolio-status-box">
+                    <div class="status-badge completed">Completed</div>
+                    <div class="learn-more-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </div>
+                <div class="portfolio-overlay">
+                    <h3 class="portfolio-name">Adhira Beauty Parlour</h3>
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <p class="portfolio-cat">Commercial</p>
+                        <span style="width: 4px; height: 4px; background: var(--green-action); border-radius: 50%;"></span>
+                        <p class="portfolio-cat" style="color: white; opacity: 0.8;">Nagercoil</p>
+                    </div>
+                </div>
+            </a>
+            <!-- 6: Vihaan Homes -->
+            <a href="projects.html#vihaan-homes" class="portfolio-item reveal" style="transition-delay: 0.5s;">
+                <img src="assets/images/vihaan-homes.jpeg" alt="Vihaan Homes" class="portfolio-img" style="object-fit: contain; background: #1a2a3a;">
+                <div class="portfolio-status-box">
+                    <div class="status-badge ongoing">Ongoing</div>
+                    <div class="learn-more-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </div>
+                <div class="portfolio-overlay">
+                    <h3 class="portfolio-name">Vihaan Homes</h3>
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <p class="portfolio-cat">Residential</p>
+                        <span style="width: 4px; height: 4px; background: var(--green-action); border-radius: 50%;"></span>
+                        <p class="portfolio-cat" style="color: white; opacity: 0.8;">Hosur</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="text-center mt-4 reveal" style="margin-top: 3rem; text-align: center;">
+            <a href="projects.html" class="btn-action btn-secondary">View All Projects</a>
+        </div>
+    </section>
+
+    <!-- ==================== 4. USP / WHY CHOOSE US ==================== -->
+    <section class="usp-section">
+        <div class="reveal text-center mb-5" style="position: relative; z-index: 2;">
+            <div class="section-tag" style="color: var(--green-action);">The Vihaan Edge</div>
+            <h2 class="section-title text-white">Why We Stand Different</h2>
+            <p class="text-white" style="opacity: 0.7; max-width: 600px; margin: 0 auto;">Engineering excellence combined with radical transparency and a customer-first mindset.</p>
+        </div>
+        
+        <div class="usp-grid reveal">
+            <!-- 01 Live Site -->
+            <div class="usp-card">
+                <div class="usp-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="30" height="30"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                </div>
+                <h3 class="usp-title">Live Site Monitoring</h3>
+                <p class="usp-desc">Watch your home take shape in real-time with 24/7 CCTV access provided for every project site. Absolute transparency from foundation to finish.</p>
+            </div>
+
+            <!-- 02 Approaches -->
+            <div class="usp-card">
+                <div class="usp-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="30" height="30"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3 class="usp-title">Flexible Approaches</h3>
+                <p class="usp-desc">From Precast to RCC frame structures, we tailor modern engineering methods to match your specific timeline and budget goals perfectly.</p>
+            </div>
+
+            <!-- 03 Delivery -->
+            <div class="usp-card">
+                <div class="usp-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="30" height="30"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <h3 class="usp-title">Faster Delivery</h3>
+                <p class="usp-desc">Optimized structural planning and project management ensure on-time handover without ever compromising on quality or safety.</p>
+            </div>
+
+            <!-- 04 Pricing -->
+            <div class="usp-card">
+                <div class="usp-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="30" height="30"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 100 4h4a2 2 0 110 4H8M12 18V6"/></svg>
+                </div>
+                <h3 class="usp-title">Transparent Pricing</h3>
+                <p class="usp-desc">Detailed cost breakdowns and zero hidden charges. Premium quality homes starting from ₹1775 per sq. ft. No surprises, just honesty.</p>
+            </div>
+
+            <!-- 05 Quality -->
+            <div class="usp-card">
+                <div class="usp-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="30" height="30"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <h3 class="usp-title">ISO Certified Build</h3>
+                <p class="usp-desc">We use strictly premium, ISO-certified materials and follow rigorous multi-point quality check protocols to ensure long-term structural integrity.</p>
+            </div>
+
+            <!-- 06 Support -->
+            <div class="usp-card">
+                <div class="usp-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="30" height="30"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                </div>
+                <h3 class="usp-title">Expert Guidance</h3>
+                <p class="usp-desc">Free 2D elevation designs and expert technical consultations from our dedicated team of civil engineers at every stage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 5. PROCESS ==================== -->
+    <section class="process-section">
+        <div class="process-container">
+            <div class="reveal text-center mb-5">
+                <div class="section-tag">Methodology</div>
+                <h2 class="section-title" style="font-size: 3.5rem;">The Engineering Journey</h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">A structured, data-driven approach to building your vision, from initial concept to final handover.</p>
+            </div>
+            
+            <div class="process-grid reveal">
+                <!-- Step 01 -->
+                <div class="process-step">
+                    <div class="process-num-large">01</div>
+                    <div class="process-dot"></div>
+                    <div class="process-content">
+                        <div class="process-badge">Concept</div>
+                        <h3 class="process-title">Consultation</h3>
+                        <p class="process-desc">We deep-dive into your vision, analyzing plot details, budgetary goals, and technical expectations.</p>
+                    </div>
+                </div>
+
+                <!-- Step 02 -->
+                <div class="process-step">
+                    <div class="process-num-large">02</div>
+                    <div class="process-dot"></div>
+                    <div class="process-content">
+                        <div class="process-badge">Architecture</div>
+                        <h3 class="process-title">Planning & Design</h3>
+                        <p class="process-desc">Space planning, 2D layouts, and elevation concepts tailored to your aesthetic and functional needs.</p>
+                    </div>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="process-step">
+                    <div class="process-num-large">03</div>
+                    <div class="process-dot"></div>
+                    <div class="process-content">
+                        <div class="process-badge">Precision</div>
+                        <h3 class="process-title">Cost Estimation</h3>
+                        <p class="process-desc">Receive a comprehensive, transparent cost breakdown with zero hidden variables for absolute financial clarity.</p>
+                    </div>
+                </div>
+
+                <!-- Step 04 -->
+                <div class="process-step">
+                    <div class="process-num-large">04</div>
+                    <div class="process-dot"></div>
+                    <div class="process-content">
+                        <div class="process-badge">Core</div>
+                        <h3 class="process-title">Construction</h3>
+                        <p class="process-desc">Structural execution handled by seasoned engineers with daily progress tracking and live site monitoring.</p>
+                    </div>
+                </div>
+
+                <!-- Step 05 -->
+                <div class="process-step">
+                    <div class="process-num-large">05</div>
+                    <div class="process-dot"></div>
+                    <div class="process-content">
+                        <div class="process-badge">Review</div>
+                        <h3 class="process-title">Quality Checks</h3>
+                        <p class="process-desc">Multi-stage structural audits and finishing inspections ensure every inch meets our high-durability standards.</p>
+                    </div>
+                </div>
+
+                <!-- Step 06 -->
+                <div class="process-step">
+                    <div class="process-num-large">06</div>
+                    <div class="process-dot"></div>
+                    <div class="process-content">
+                        <div class="process-badge">Legacy</div>
+                        <h3 class="process-title">Project Handover</h3>
+                        <p class="process-desc">The keys to your dream home are delivered with a final walk-through and complete satisfaction guarantee.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 6. SMART SOLUTIONS ==================== -->
+    <section class="feature-highlight-section">
+        <div class="feature-layout reveal">
+            <div class="feature-image-container">
+                <img src="assets/images/rough-sketch.png" alt="Rough Architectural Sketch" class="masterpiece-img">
+            </div>
+
+            <div class="feature-text-area">
+                <div class="section-tag">Smart Solutions</div>
+                <h2 class="section-title" style="font-size: 3rem; margin-bottom: 2rem;">Smarter Construction. <br><span style="color: var(--blue-primary);">Better Living.</span></h2>
+                
+                <div class="accordion-container">
+                    <!-- Item 01 -->
+                    <div class="accordion-item active" onclick="toggleAccordion(this)">
+                        <div class="accordion-header">
+                            <div class="accordion-title-wrap">
+                                <span class="accordion-num">01</span>
+                                <h4 class="accordion-title">Structural Strength</h4>
+                            </div>
+                            <div class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="accordion-desc">Our earthquake-resistant designs utilize premium ISO-certified steel and high-grade concrete for unmatched structural durability.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 02 -->
+                    <div class="accordion-item" onclick="toggleAccordion(this)">
+                        <div class="accordion-header">
+                            <div class="accordion-title-wrap">
+                                <span class="accordion-num">02</span>
+                                <h4 class="accordion-title">Flexible Build Options</h4>
+                            </div>
+                            <div class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="accordion-desc">Modular and adaptable construction approaches tailored to your unique functional requirements and budgetary goals.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 03 -->
+                    <div class="accordion-item" onclick="toggleAccordion(this)">
+                        <div class="accordion-header">
+                            <div class="accordion-title-wrap">
+                                <span class="accordion-num">03</span>
+                                <h4 class="accordion-title">Rapid Project Execution</h4>
+                            </div>
+                            <div class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="accordion-desc">Optimized planning and expert structural management to ensure up to 30% faster project completion without quality compromise.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 04 -->
+                    <div class="accordion-item" onclick="toggleAccordion(this)">
+                        <div class="accordion-header">
+                            <div class="accordion-title-wrap">
+                                <span class="accordion-num">04</span>
+                                <h4 class="accordion-title">Zero Waste & Sustainability</h4>
+                            </div>
+                            <div class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="accordion-desc">Efficient material management and clean site protocols that reduce environmental impact and lower overall project costs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 05 -->
+                    <div class="accordion-item" onclick="toggleAccordion(this)">
+                        <div class="accordion-header">
+                            <div class="accordion-title-wrap">
+                                <span class="accordion-num">05</span>
+                                <h4 class="accordion-title">Organized Project Workflow</h4>
+                            </div>
+                            <div class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="accordion-desc">Transparent project tracking with daily updates, ensuring you are always informed about every milestone of the construction.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 06 -->
+                    <div class="accordion-item" onclick="toggleAccordion(this)">
+                        <div class="accordion-header">
+                            <div class="accordion-title-wrap">
+                                <span class="accordion-num">06</span>
+                                <h4 class="accordion-title">Modern Design Excellence</h4>
+                            </div>
+                            <div class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="accordion-desc">Architectural aesthetics blended seamlessly with practical functionality for a truly contemporary lifestyle experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleAccordion(element) {
+            const items = document.querySelectorAll('.accordion-item');
+            items.forEach(item => {
+                if (item !== element) {
+                    item.classList.remove('active');
+                }
+            });
+            element.classList.toggle('active');
+        }
+    </script>
+    </section>
+
+    <!-- ==================== 8. TESTIMONIALS ==================== -->
+    <section class="testimonials-section bg-main" id="testimonials">
+        <div class="reveal text-center mb-5">
+            <div class="section-tag">What Our Clients Say</div>
+            <h2 class="section-title">Real Stories from Happy Families</h2>
+        </div>
+        
+        <div class="testimonials-grid reveal">
+            <div class="testimonial-card glass-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">“Vihaan Constructions made our home-building journey smooth and stress-free. The team was responsive, transparent, and completed the work faster than we expected.”</p>
+                <h4 class="client-name">— Ramesh & Priya</h4>
+            </div>
+            <div class="testimonial-card glass-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">“We were looking for an affordable yet quality construction company, and Vihaan delivered exactly that. The finishing and planning were excellent.”</p>
+                <h4 class="client-name">— Karthik S.</h4>
+            </div>
+            <div class="testimonial-card glass-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">“The biggest advantage was the speed of construction. We could clearly see organized execution and regular updates throughout the project.”</p>
+                <h4 class="client-name">— Anjali & Vikram</h4>
+            </div>
+        </div>
+        <div class="text-center reveal" style="margin-top: 3rem; text-align: center;">
+            <a href="#testimonials" class="btn-action btn-secondary">Read More</a>
+        </div>
+    </section>
+
+    <!-- ==================== 9. FAQ ==================== -->
+    <section class="faq-section bg-surface">
+        <div class="faq-container reveal">
+            <div class="text-center mb-5">
+                <div class="section-tag">FAQ</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4 class="faq-q">What construction methods do you offer? <span class="faq-icon">+</span></h4>
+                    <p class="faq-a">We provide multiple construction solutions including precast construction, RCC frame structures, and traditional brick wall construction based on project requirements and customer preferences.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-q">What is precast construction? <span class="faq-icon">+</span></h4>
+                    <p class="faq-a">Precast construction involves manufacturing structural components in a controlled environment and assembling them at the construction site. This helps improve speed, quality, and efficiency.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-q">How long does it take to complete a home? <span class="faq-icon">+</span></h4>
+                    <p class="faq-a">Project timelines depend on the size and design of the home, but precast methods help reduce overall construction time significantly.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-q">What is the starting price? <span class="faq-icon">+</span></h4>
+                    <p class="faq-a">Our construction solutions start from ₹1775 per sq. ft.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-q">Do you provide end-to-end construction? <span class="faq-icon">+</span></h4>
+                    <p class="faq-a">Yes. We handle planning, construction, execution, finishing, and handover.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-q">Can you customize house designs? <span class="faq-icon">+</span></h4>
+                    <p class="faq-a">Absolutely. We create layouts and designs based on your requirements, lifestyle, and budget.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-q">Which areas do you serve? <span class="faq-icon">+</span></h4>
+                    <p class="faq-a">We offer services across Tamil Nadu. We are available in Bangalore and Hyderabad too. Please contact us to know the locations currently covered by our services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 10. THE CONVERSION ENGINE (FINAL CTA) ==================== -->
+    <section class="enquiry-section" id="enquiry">
+        <div class="enquiry-layout">
+            <!-- Left Info Pane: Cinematic Visual -->
+            <div class="enquiry-info-pane reveal">
+                <div class="section-tag" style="background: transparent; color: var(--green-action); width: fit-content; font-weight: 800; padding: 0; margin-bottom: 1rem;">Plan Your Future</div>
+                <h3>Your Dream Home, <br>Expertly Built.</h3>
+                <p>From modern independent villas to premium residential spaces, we bring high-quality engineering and trust to every family home.</p>
+                
+                <ul class="enquiry-contact-list">
+                    <li class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <a href="tel:+919876543210" style="color: inherit; text-decoration: none;">+91 98765 43210</a>
+                    </li>
+                    <li class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <a href="mailto:projects@vihaanconstructions.com" style="color: inherit; text-decoration: none;">projects@vihaanconstructions.com</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Right Form Pane: Architectural Desk -->
+            <div class="enquiry-form-pane reveal">
+                <div class="enquiry-form-card">
+                    <h4 class="form-title">Request Call Back</h4>
+                    <p class="form-subtitle">Let us discuss your requirements and come up with the best solution.</p>
+                    <form action="#" method="POST">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="input-group">
+                                <input type="text" class="form-input" placeholder="Full Name *" required>
+                                <div class="input-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" class="form-input" placeholder="Email Address" required>
+                                <div class="input-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="input-group">
+                                <input type="tel" class="form-input" placeholder="Phone Number *" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+                                <div class="input-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-input" placeholder="Project Location *" required>
+                                <div class="input-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <select class="form-input placeholder-selected" style="appearance: none;" onchange="this.value === '' ? this.classList.add('placeholder-selected') : this.classList.remove('placeholder-selected')">
+                                <option value="" selected>Service Type</option>
+                                <option value="residential">Residential Construction</option>
+                                <option value="commercial">Commercial Projects</option>
+                                <option value="interior">Interior Design</option>
+                                <option value="renovation">Renovation & Expansion</option>
+                                <option value="other">Other Services</option>
+                            </select>
+                            <div class="input-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg></div>
+                        </div>
+                        <div class="input-group">
+                            <textarea class="form-input" placeholder="Tell us about your project goals and requirements..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Request Call Back</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+            <footer style="background: var(--blue-dark); color: #fff; border-top: none;">
+        <div class="footer-top" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; padding: 5rem 5%; max-width: 1400px; margin: 0 auto;">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo/main-logo.png" alt="Vihaan Constructions" class="footer-logo" style="filter: brightness(0) invert(1);">
+                </a>
+                <p class="footer-desc" style="color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.6; margin-top: 1rem; max-width: 300px;">To make quality home construction accessible for all without compromising on strength, safety, or design.</p>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 1.2rem;">Pages</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="index.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Home</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="about.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">About Us</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="services.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Services</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="projects.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Projects</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="contact.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 1.2rem;">Services</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="services.html#residential" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Residential</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="services.html#commercial" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Commercial</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="services.html#interior" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Interior Design</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="services.html#renovation" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Renovation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 1.2rem;">Contact</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="tel:+918148410102" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">+91 81484 10102</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="mailto:vihaanconstructions.india@gmail.com" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">vihaanconstructions.india@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+            <div class="footer-copy">© 2026 Vihaan Constructions. All rights reserved.</div>
+            <div class="footer-tagline" style="font-weight: 600; color: #fff;">Built with purpose. Delivered with pride.</div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+    <script>
+        // Simple FAQ Accordion Logic
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                const a = q.nextElementSibling;
+                const icon = q.querySelector('.faq-icon');
+                const isOpen = a.style.maxHeight;
+                
+                document.querySelectorAll('.faq-a').forEach(ans => ans.style.maxHeight = null);
+                document.querySelectorAll('.faq-icon').forEach(ic => ic.textContent = '+');
+                
+                if (!isOpen) {
+                    a.style.maxHeight = a.scrollHeight + "px";
+                    icon.textContent = '-';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
