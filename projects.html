@@ -75,8 +75,8 @@
         }
 
         .project-info p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
+            font-size: 1rem;
+            color: var(--text-main, #334155);
             line-height: 1.6;
             font-family: 'Montserrat', sans-serif;
         }
@@ -86,6 +86,23 @@
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 1.5rem;
             padding-bottom: 4rem;
+        }
+
+        @media (min-width: 992px) {
+            .project-editorial {
+                display: grid;
+                grid-template-columns: 1fr 1.5fr;
+                gap: 4rem;
+                align-items: start;
+            }
+            .project-editorial .project-info {
+                position: sticky;
+                top: 120px;
+                margin-bottom: 0;
+            }
+            .project-editorial .project-grid {
+                padding-bottom: 0;
+            }
         }
 
         @media (max-width: 600px) {
@@ -166,10 +183,29 @@
     </header>
 
     <!-- RP Residency -->
-    <section id="rp-residency" class="project-section">
+    <section id="rp-residency" class="project-section project-editorial">
         <div class="project-info reveal">
             <h2>RP Residency</h2>
-            <p>Full Construction & Interior Design • Chennai. A showcase of modern residential architecture and engineering precision.</p>
+            <div class="project-badges" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Full Construction & Interior Design
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Chennai
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.1); color: #16a34a; padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(34, 197, 94, 0.2); letter-spacing: 0.5px; text-transform: uppercase;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Completed
+                </span>
+            </div>
+            <p style="margin-bottom: 1rem; text-align: justify;">For RP Residency, the main idea was to create a home that beautifully blends modern city living with the warmth and simplicity of a traditional village setup. While the ground and first floor were designed with a modern style, the terrace was planned with a more traditional village-inspired atmosphere, giving the family the experience of both worlds within the same home.</p>
+            <p style="margin-bottom: 1rem; text-align: justify;">Since the family deeply loves nature, we made sure to include greenery wherever possible. Every seating area was thoughtfully complemented with garden spaces and plants to create a calm and refreshing environment. We also focused on making maximum use of every corner of the house, including the white spaces, so the entire design feels balanced, functional, and visually pleasing.</p>
+            <p style="margin-bottom: 1rem; text-align: justify;">The home has several relaxing corners designed for comfort and peaceful living. An east-facing bay window in the living area creates a cozy space to unwind with beautiful natural light during the mornings. In the master bedroom, a west-facing bay window creates a calm and peaceful corner inside the room. The master bedroom also opens into a south-facing balcony through a large French window, bringing in openness, ventilation, and a strong connection to the outdoors.</p>
+            <p style="margin-bottom: 1rem; text-align: justify;">The terrace was designed as a lively green space for the family to build their own organic garden and enjoy flowering plants around them. The thinnai was created as a way to connect the open kitchen with the organic garden area, creating a beautiful transition between spaces. Sitting in the thinnai offers a peaceful view of the entire terrace and the workspace nearby.</p>
+            <p style="margin-bottom: 1rem; text-align: justify;">The workspace itself was thoughtfully planned as a creative and multifunctional area. It includes a comfortable work setup, a gaming space, a balcony, and a bay window, making the room both productive and relaxing at the same time.</p>
+            <p style="text-align: justify;">From the terrace, an additional staircase leads to the upper terrace level, which offers a spectacular panoramic view of the surroundings and completes the overall living experience of the home.</p>
         </div>
         <div class="project-grid">
             <div class="grid-item reveal"><img src="assets/images/projects/RP/RP1.jpeg" alt="RP Elevation" loading="lazy" decoding="async"></div>
@@ -199,7 +235,21 @@
     <section id="gnaneshwar-villa" class="project-section">
         <div class="project-info reveal">
             <h2>Gnaneshwar Villa</h2>
-            <p>Premium Wood Work & Interiors • Bangalore. Crafting warm, high-end living spaces with artisan woodwork.</p>
+            <div class="project-badges" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Premium Wood Work & Interiors
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Bangalore
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.1); color: #16a34a; padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(34, 197, 94, 0.2); letter-spacing: 0.5px; text-transform: uppercase;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Completed
+                </span>
+            </div>
+            <p>Crafting warm, high-end living spaces with artisan woodwork.</p>
         </div>
         <div class="project-grid">
             <div class="grid-item reveal"><img src="assets/images/projects/Gnaneshwar Residency-Bangalore/Blr.jpeg" alt="Villa Exterior" loading="lazy" decoding="async"></div>
@@ -217,10 +267,26 @@
     </section>
 
     <!-- Brijith Residency -->
-    <section id="brijith-residency" class="project-section">
+    <section id="brijith-residency" class="project-section project-editorial">
         <div class="project-info reveal">
             <h2>Brijith Residency</h2>
-            <p>Full Construction • Tenkasi. Heavy-duty structural engineering meets grand architectural scale.</p>
+            <div class="project-badges" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Full Construction
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Tenkasi
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.1); color: #16a34a; padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(34, 197, 94, 0.2); letter-spacing: 0.5px; text-transform: uppercase;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Completed
+                </span>
+            </div>
+            <p style="margin-bottom: 1rem; text-align: justify;">While working on this home, we wanted every part of it to feel connected to the beauty of Tenkasi. Since the place is known for its pleasant drizzles and beautiful mountain views, we planned two balconies, one in the front and one at the back, so the family could enjoy the weather and scenery peacefully. We also used large 5-foot French windows throughout the house to bring in more natural light and create an open, airy feeling inside the home.</p>
+            <p style="margin-bottom: 1rem; text-align: justify;">Another special element in this project is the indoor garden space designed behind the staircase. We wanted even the interiors to feel fresh and connected to nature. The first two staircase steps were intentionally designed wider, around 7 feet long, so they could also work as a comfortable seating space. It creates a cozy spot in the house that feels very natural and relaxing.</p>
+            <p style="text-align: justify;">For the elevation, Jaali elements were used to enhance the overall aesthetic of the home. To make the design feel more balanced and visually appealing from every angle, the same Jaali detail was continued onto one corner of the structure as well. This small addition greatly improved the side elevation and gave the house a unique architectural character.</p>
         </div>
         <div class="project-grid">
             <div class="grid-item reveal"><img src="assets/images/projects/Brijith Residency-Tenkasi/Tenkasi 1.jpeg" alt="Residency Facade" loading="lazy" decoding="async"></div>
@@ -242,7 +308,21 @@
     <section id="vihaan-homes" class="project-section">
         <div class="project-info reveal">
             <h2>Vihaan Homes</h2>
-            <p>Ongoing Development • Hosur. Modern community living designed for comfort and future-ready infrastructure. Explore our site progress and architectural vision.</p>
+            <div class="project-badges" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Community Development
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Hosur
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(59, 130, 246, 0.1); color: #2563eb; padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(59, 130, 246, 0.2); letter-spacing: 0.5px; text-transform: uppercase;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    Ongoing
+                </span>
+            </div>
+            <p>Modern community living designed for comfort and future-ready infrastructure. Explore our site progress and architectural vision.</p>
         </div>
         <div class="project-grid">
             <div class="grid-item reveal"><img src="assets/images/projects/Vihaan Homes/vihaan homes.jpeg" alt="Vihaan Homes Concept" loading="lazy" decoding="async"></div>
@@ -258,10 +338,25 @@
     </section>
 
     <!-- Anil Residency -->
-    <section id="anil-residency" class="project-section">
+    <section id="anil-residency" class="project-section project-editorial">
         <div class="project-info reveal">
             <h2>Anil Residency</h2>
-            <p>Interior Design • Trivandrum. Modern interior aesthetics blended with traditional structural stability.</p>
+            <div class="project-badges" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Interior Design
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Trivandrum
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.1); color: #16a34a; padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(34, 197, 94, 0.2); letter-spacing: 0.5px; text-transform: uppercase;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Completed
+                </span>
+            </div>
+            <p style="margin-bottom: 1rem; text-align: justify;">For Anil Residency, we worked on the interior design with a strong focus on space optimization. Since the available space was comparatively limited, the challenge was to create interiors that felt open, functional, and aesthetically balanced without making the spaces look crowded.</p>
+            <p style="text-align: justify;">We approached the project with a minimalistic design style, carefully planning every element to make the best use of the available area while maintaining a clean and elegant look throughout the home. The color palette was also selected thoughtfully to complement the exterior design of the house, helping the interiors and exteriors feel visually connected and harmonious.</p>
         </div>
         <div class="project-grid">
             <div class="grid-item reveal"><img src="assets/images/projects/Anil Residency -Trivandrum/Anil home.jpeg" alt="Anil Residency" loading="lazy" decoding="async"></div>
@@ -278,7 +373,21 @@
     <section id="adhira-beauty" class="project-section">
         <div class="project-info reveal">
             <h2>Adhira Beauty Parlour</h2>
-            <p>Commercial Interior • Nagercoil. High-end functional environment for a premium salon experience.</p>
+            <div class="project-badges" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Commercial Interior
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Nagercoil
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.1); color: #16a34a; padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(34, 197, 94, 0.2); letter-spacing: 0.5px; text-transform: uppercase;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Completed
+                </span>
+            </div>
+            <p>High-end functional environment for a premium salon experience.</p>
         </div>
         <div class="project-grid">
             <div class="grid-item reveal"><img src="assets/images/projects/Adhira Parlour/1.png" alt="Adhira Interior" loading="lazy" decoding="async"></div>
