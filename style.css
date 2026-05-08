@@ -1881,6 +1881,63 @@ textarea.form-input {
     filter: drop-shadow(0 15px 25px rgba(37,211,102,0.4));
 }
 
+/* =============================================
+   BACK TO TOP BUTTON
+   ============================================= */
+.back-to-top {
+    position: fixed;
+    bottom: 6.5rem; /* Above WhatsApp button */
+    right: 2rem;
+    width: 55px;
+    height: 55px;
+    background: var(--blue-dark);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 45, 98, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 998;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--blue-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 45, 98, 0.4);
+}
+
+.back-to-top svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        right: 1.5rem;
+        bottom: 6rem; /* Above WhatsApp button on mobile */
+        width: 50px;
+        height: 50px;
+    }
+}
+
 @media (max-width: 768px) {
     .whatsapp-float {
         bottom: 1.5rem;

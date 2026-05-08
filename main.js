@@ -106,4 +106,26 @@ document.addEventListener('DOMContentLoaded', () => {
     markActiveLinks('.nav-links a');
     markActiveLinks('.mobile-menu a');
     markActiveLinks('.footer-col ul a');
+
+    // ----------------------------------------------------
+    // Back to Top Button
+    // ----------------------------------------------------
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
