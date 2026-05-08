@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PSRQCXN9');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Project Estimate | Vihaan Constructions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --blue-primary: #004AAD;
+            --blue-dark: #002D62;
+            --green-action: #7ED957;
+            --bg-light: #f4f7fa;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --radius-xl: 24px;
+            --radius-md: 12px;
+            --shadow-premium: 0 25px 50px -12px rgba(0, 45, 98, 0.12);
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* --- Refined Navigation --- */
+        .quote-nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            border-bottom: 1px solid rgba(0, 45, 98, 0.05);
+        }
+
+        /* --- Dynamic Hero --- */
+        .hero-v3 {
+            padding: 160px 5% 100px;
+            background: linear-gradient(135deg, #001a3d 0%, var(--blue-dark) 100%);
+            color: #fff;
+            text-align: center;
+            position: relative;
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+
+        .hero-v3 p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            color: #f1f5f9; /* Light grey instead of white with opacity */
+            font-weight: 400;
+        }
+
+        .hero-v3 h1 {
+            color: #fff;
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        /* --- Trust Strip (Glassmorphism) --- */
+        .trust-glass {
+            max-width: 1100px;
+            margin: -50px auto 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            border-radius: var(--radius-xl);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            box-shadow: var(--shadow-premium);
+            position: relative;
+            z-index: 10;
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+
+        .trust-pill {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: 700;
+            color: var(--blue-dark);
+            font-size: 0.95rem;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .trust-pill:last-child { border-right: none; }
+        .trust-pill svg { color: var(--green-action); }
+
+        /* --- Form Section (Premium Card) --- */
+        .form-container-v3 {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 5%;
+        }
+
+        .premium-card {
+            background: #fff;
+            padding: 4rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-premium);
+            border: 1px solid rgba(0, 45, 98, 0.03);
+        }
+
+        .card-header { text-align: center; margin-bottom: 4rem; }
+        .card-header h2 { font-size: 2.2rem; font-weight: 800; color: var(--blue-dark); margin-bottom: 0.5rem; }
+        .card-header p { color: var(--text-muted); font-size: 1.1rem; }
+
+        .form-grid-v3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .field-v3 { display: flex; flex-direction: column; gap: 10px; }
+        .field-v3 label { font-size: 0.9rem; font-weight: 700; color: var(--blue-dark); letter-spacing: 0.5px; }
+
+        .input-v3 {
+            width: 100%;
+            padding: 1.1rem 1.4rem;
+            border-radius: var(--radius-md);
+            border: 2px solid #f1f5f9;
+            background: #f8fafc;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: var(--text-main);
+            box-sizing: border-box;
+        }
+
+        .input-v3:focus {
+            outline: none;
+            border-color: var(--blue-primary);
+            background: #fff;
+            box-shadow: 0 10px 25px -5px rgba(0, 86, 179, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-premium {
+            width: 100%;
+            padding: 1.4rem;
+            background: var(--blue-dark);
+            color: #fff;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1.15rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.4s;
+            box-shadow: 0 15px 30px rgba(0, 45, 98, 0.2);
+            margin-top: 1rem;
+        }
+
+        .btn-premium:hover {
+            background: var(--blue-primary);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 45, 98, 0.3);
+        }
+
+        /* --- How It Works (Visual Timeline) --- */
+        .process-v3 {
+            padding: 100px 5%;
+            background: #fff;
+        }
+
+        .timeline-v3 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 60px auto 0;
+            position: relative;
+        }
+
+        .timeline-v3::after {
+            content: '';
+            position: absolute;
+            top: 30px; left: 10%; right: 10%;
+            height: 2px;
+            background: #f1f5f9;
+            z-index: 1;
+        }
+
+        .step-v3 { position: relative; z-index: 2; text-align: center; }
+        .step-circle {
+            width: 60px; height: 60px;
+            background: #fff;
+            border: 2px solid var(--blue-dark);
+            color: var(--blue-dark);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px;
+            font-weight: 900; font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        .step-v3:hover .step-circle { background: var(--blue-dark); color: #fff; transform: scale(1.1); }
+        .step-v3 h4 { font-size: 0.95rem; font-weight: 700; color: var(--blue-dark); line-height: 1.4; }
+
+        /* --- Final Footer CTA --- */
+        .quote-footer {
+            padding: 100px 5%;
+            background: var(--blue-dark);
+            color: #fff;
+            text-align: center;
+        }
+
+        .quote-footer h2 {
+            color: #fff !important;
+        }
+
+        .quote-footer p {
+            color: #cbd5e1 !important;
+        }
+
+        .wa-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 1.2rem 2.5rem;
+            background: #25D366;
+            color: #fff;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 800;
+            margin-top: 2rem;
+            transition: all 0.3s;
+        }
+        .wa-btn:hover { background: #128C7E; transform: translateY(-3px); }
+
+        /* --- Responsive Logic --- */
+        @media (max-width: 1024px) {
+            .trust-glass { grid-template-columns: repeat(2, 1fr); border-radius: 24px; }
+            .timeline-v3 { grid-template-columns: 1fr; gap: 40px; }
+            .timeline-v3::after { display: none; }
+            .step-v3 { display: flex; align-items: center; text-align: left; gap: 20px; }
+            .step-circle { margin: 0; flex-shrink: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .form-grid-v3 { grid-template-columns: 1fr; gap: 1.5rem; }
+            .premium-card { padding: 2.5rem 1.5rem; }
+            .hero-v3 { padding: 140px 5% 80px; }
+            .trust-glass { grid-template-columns: 1fr; gap: 1rem; }
+            .trust-pill { border-right: none; border-bottom: 1px solid #f1f5f9; padding-bottom: 1rem; justify-content: flex-start; }
+            .trust-pill:last-child { border-bottom: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSRQCXN9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Navigation -->
+    <nav id="navbar" style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 5%; height: 90px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0, 45, 98, 0.1);">
+        <a href="index.html" class="logo" style="justify-self: start;">
+            <img src="assets/logo/main-logo.png" alt="Vihaan Constructions" class="nav-logo">
+        </a>
+        <ul class="nav-links" style="justify-self: center; display: flex; gap: 2.5rem; list-style: none; margin: 0; padding: 0;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+        <div class="nav-actions" style="justify-self: end; display: flex; align-items: center; gap: 1.5rem;">
+            <a href="tel:+918148410102" class="nav-phone" style="font-weight: 700; color: var(--blue-dark); text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                +91 81484 10102
+            </a>
+            <a href="get-a-quote.html" class="btn-action btn-primary nav-cta" style="padding: 0.6rem 1.5rem !important;">Get a Quote</a>
+        </div>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#services">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="tel:+918148410102" style="font-weight: 700;">Call: +91 81484 10102</a>
+        <a href="get-a-quote.html" class="mobile-cta">Get a Quote</a>
+    </div>
+
+    <header class="hero-v3">
+        <div class="reveal">
+            <h1>Know Your Project Cost Instantly</h1>
+            <p>Share your vision and receive a clear, comprehensive estimate tailored to your space, requirements, and budget.</p>
+            <a href="#form" class="btn-action btn-primary" style="padding: 1.2rem 3rem; border-radius: 12px; font-weight: 800;">Get My Quote</a>
+        </div>
+    </header>
+
+    <div class="trust-glass reveal">
+        <div class="trust-pill">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+            Transparent Pricing
+        </div>
+        <div class="trust-pill">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+            No Hidden Charges
+        </div>
+        <div class="trust-pill">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+            Free Consultation
+        </div>
+        <div class="trust-pill">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+            Expert Solutions
+        </div>
+    </div>
+
+    <section class="form-container-v3" id="form">
+        <div class="premium-card reveal">
+            <div class="card-header">
+                <h2>Project Estimate Request</h2>
+                <p>Provide the details below for a realistic project cost analysis.</p>
+            </div>
+
+            <form id="detailedQuoteFormV3">
+                <div class="form-grid-v3">
+                    <div class="field-v3">
+                        <label>Your Name *</label>
+                        <input type="text" name="name" class="input-v3" placeholder="e.g. Arvind Kumar" required>
+                    </div>
+                    <div class="field-v3">
+                        <label>Phone Number *</label>
+                        <input type="tel" name="phone" class="input-v3" placeholder="e.g. 98765 43210" required>
+                    </div>
+                </div>
+
+                <div class="form-grid-v3">
+                    <div class="field-v3">
+                        <label>Email Address (Optional)</label>
+                        <input type="email" name="email" class="input-v3" placeholder="e.g. arvind@mail.com">
+                    </div>
+                    <div class="field-v3">
+                        <label>Project Location *</label>
+                        <input type="text" name="location" class="input-v3" placeholder="e.g. Whitefield, Bangalore" required>
+                    </div>
+                </div>
+
+                <div class="form-grid-v3">
+                    <div class="field-v3">
+                        <label>Project Type *</label>
+                        <select name="service" class="input-v3" required>
+                            <option value="">Select Category</option>
+                            <option value="residential">Residential Construction</option>
+                            <option value="commercial">Commercial Construction</option>
+                            <option value="institutional">Institutional Construction</option>
+                            <option value="farmhouse">Farmhouse Construction</option>
+                            <option value="interior">Interior Design</option>
+                            <option value="renovation">Renovation & Remodeling</option>
+                        </select>
+                    </div>
+                    <div class="field-v3">
+                        <label>Built-up Area (sq. ft.) *</label>
+                        <input type="number" name="area" class="input-v3" placeholder="e.g. 2400" required>
+                    </div>
+                </div>
+
+                <div class="form-grid-v3">
+                    <div class="field-v3">
+                        <label>Budget Range (Optional)</label>
+                        <select name="budget" class="input-v3">
+                            <option value="">Select Range</option>
+                            <option value="15-30">₹15L - ₹30L</option>
+                            <option value="30-60">₹30L - ₹60L</option>
+                            <option value="60-1cr">₹60L - ₹1Cr</option>
+                            <option value="1cr+">Above ₹1Cr</option>
+                        </select>
+                    </div>
+                    <div class="field-v3">
+                        <label>Start Timeline *</label>
+                        <select name="timeline" class="input-v3" required>
+                            <option value="">Select Timeline</option>
+                            <option value="immediate">Immediately</option>
+                            <option value="1-month">Within 1 Month</option>
+                            <option value="3-months">Within 3 Months</option>
+                            <option value="planning">Just Planning</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field-v3" style="margin-bottom: 2rem;">
+                    <label>Tell us more about your requirements (optional)</label>
+                    <textarea name="message" class="input-v3" style="min-height: 120px;" placeholder="e.g. 3BHK duplex with modern facade, modular kitchen..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-premium">Generate My Detailed Quote</button>
+            </form>
+        </div>
+
+        <div style="max-width: 700px; margin: 3rem auto; text-align: center; color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
+            "We don’t give random estimates. Every project is unique, so these details help us provide accurate, realistic pricing tailored to your specific needs."
+        </div>
+    </section>
+
+    <section class="process-v3">
+        <div class="reveal">
+            <h2 class="section-title" style="text-align: center;">How It Works</h2>
+            <div class="timeline-v3">
+                <div class="step-v3">
+                    <div class="step-circle">1</div>
+                    <h4>Share your requirement</h4>
+                </div>
+                <div class="step-v3">
+                    <div class="step-circle">2</div>
+                    <h4>Understand project scope</h4>
+                </div>
+                <div class="step-v3">
+                    <div class="step-circle">3</div>
+                    <h4>Receive detailed estimate</h4>
+                </div>
+                <div class="step-v3">
+                    <div class="step-circle">4</div>
+                    <h4>Discuss and finalize plan</h4>
+                </div>
+                <div class="step-v3">
+                    <div class="step-circle">5</div>
+                    <h4>Start construction</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer style="background: var(--blue-dark); color: #fff; border-top: none;">
+        <div class="footer-top" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; padding: 5rem 5%; max-width: 1400px; margin: 0 auto;">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo/main-logo.png" alt="Vihaan Constructions" class="footer-logo" style="filter: brightness(0) invert(1);">
+                </a>
+                <p class="footer-desc" style="color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.6; margin-top: 1rem; max-width: 300px;">To make quality home construction accessible for all without compromising on strength, safety, or design.</p>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 1.2rem;">Pages</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="index.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Home</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="index.html#about" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">About Us</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="index.html#services" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Services</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="projects.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Projects</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="get-a-quote.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Get a Quote</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 1.2rem;">Services</h4>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">Residential, Commercial, Interior Design, and Renovation across Tamil Nadu & Bangalore.</p>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 1.2rem;">Contact</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="tel:+918148410102" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">+91 81484 10102</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="mailto:vihaanconstructions.india@gmail.com" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">vihaanconstructions.india@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+            <div class="footer-copy">© 2026 Vihaan Constructions. All rights reserved.</div>
+            <div class="footer-tagline" style="font-weight: 600; color: #fff;">Built with purpose. Delivered with pride.</div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location.href='quote-success.html';}"></iframe>
+    
+    <script>
+        var submitted = false;
+        const detailedQuoteFormV3 = document.getElementById('detailedQuoteFormV3');
+        if (detailedQuoteFormV3) {
+            detailedQuoteFormV3.action = 'https://script.google.com/macros/s/AKfycbxNA3N_kObf1jtzvRg82iaG_23NoK0TQswqVdkO2JmM7H_8b4It2fQX1grs8OqQWo0F0g/exec';
+            detailedQuoteFormV3.method = 'POST';
+            detailedQuoteFormV3.target = 'hidden_iframe';
+            
+            detailedQuoteFormV3.addEventListener('submit', function() {
+                submitted = true;
+                const submitBtn = this.querySelector('.btn-premium');
+                submitBtn.innerText = 'Processing Estimate...';
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.7';
+            });
+        }
+    </script>
+</body>
+</html>
