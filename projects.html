@@ -1,255 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PSRQCXN9');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects — Vihaan Constructions</title>
-    <meta name="description" content="Explore the portfolio of Vihaan Constructions — residential, commercial, and interior projects across South India.">
+    <title>Project Portfolio | Vihaan Constructions — Engineering Excellence</title>
+    <meta name="description" content="Detailed portfolio of residential and commercial projects across Tamil Nadu and Bangalore. Built with trust and quality.">
+    <link rel="canonical" href="https://www.vihaanconstructions.in/projects.html">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.vihaanconstructions.in/projects.html">
+    <meta property="og:title" content="Project Portfolio | Vihaan Constructions — Engineering Excellence">
+    <meta property="og:description" content="Detailed portfolio of residential and commercial projects across Tamil Nadu and Bangalore. Built with trust and quality.">
+    <meta property="og:image" content="https://www.vihaanconstructions.in/assets/logo/main-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.vihaanconstructions.in/projects.html">
+    <meta property="twitter:title" content="Project Portfolio | Vihaan Constructions — Engineering Excellence">
+    <meta property="twitter:description" content="Detailed portfolio of residential and commercial projects across Tamil Nadu and Bangalore. Built with trust and quality.">
+    <meta property="twitter:image" content="https://www.vihaanconstructions.in/assets/logo/main-logo.png">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <style>body{background:var(--bg-main);}</style>
+    <style>
+        .projects-header {
+            padding: 160px 5% 60px;
+            background: var(--blue-dark);
+            color: #fff;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .projects-header h1 {
+            font-size: var(--text-hero);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: #f8fafc;
+        }
+
+        .project-section {
+            padding: 80px 5%;
+            border-bottom: 1px solid #eee;
+        }
+
+        .project-section:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .project-info {
+            margin-bottom: 3rem;
+            max-width: 800px;
+        }
+
+        .project-info h2 {
+            font-size: var(--text-h2);
+            color: var(--blue-dark);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .project-info p {
+            font-size: 1rem;
+            color: var(--text-main, #334155);
+            line-height: 1.6;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            padding-bottom: 4rem;
+        }
+
+        @media (min-width: 992px) {
+            .project-editorial {
+                display: grid;
+                grid-template-columns: 1fr 1.5fr;
+                gap: 4rem;
+                align-items: start;
+            }
+            .project-editorial .project-info {
+                position: sticky;
+                top: 120px;
+                margin-bottom: 0;
+            }
+            .project-editorial .project-grid {
+                padding-bottom: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .project-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 0.8rem;
+                padding-bottom: 2rem;
+            }
+            .projects-header { padding: 120px 5% 40px; }
+            .projects-header h1 { font-size: 2.2rem; }
+            .project-info h2 { font-size: 1.8rem; }
+        }
+
+        .grid-item {
+            aspect-ratio: 4/3;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #eee;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .projects-header h1 { font-size: 2.5rem; }
+            .project-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+        }
+    </style>
 </head>
 <body>
-    <nav id="navbar" style="position:fixed;top:0;left:0;right:0;z-index:100;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 5%;height:90px;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,45,98,0.1);">
-        <a href="index.html" class="logo" style="justify-self:start;"><img src="assets/logo/main-logo.png" alt="Vihaan Constructions" class="nav-logo"></a>
-        <ul class="nav-links" style="justify-self:center;display:flex;gap:2.5rem;list-style:none;margin:0;padding:0;">
-            <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
-            <li class="dropdown"><a href="services.html" style="display:flex;align-items:center;gap:5px;">Services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
-                <ul class="dropdown-menu"><li><a href="services.html#residential">Residential</a></li><li><a href="services.html#commercial">Commercial</a></li><li><a href="services.html#interior">Interior Design</a></li><li><a href="services.html#renovation">Renovation</a></li></ul>
-            </li>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSRQCXN9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Navigation (Global) -->
+    <nav id="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/logo/main-logo.png" alt="Vihaan Constructions" class="nav-logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#services">Services</a></li>
             <li><a href="projects.html">Projects</a></li>
         </ul>
-        <div class="nav-actions" style="justify-self:end;display:flex;align-items:center;gap:1.5rem;">
-            <a href="tel:+918148410102" class="nav-phone" style="font-weight:700;color:var(--blue-dark);text-decoration:none;display:flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 81484 10102</a>
-            <a href="contact.html" class="btn-action btn-primary nav-cta" style="padding:0.6rem 1.5rem !important;">Get a Quote</a>
+        <div class="nav-actions">
+            <a href="tel:+918148410102" class="nav-phone">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                +91 81484 10102
+            </a>
+            <a href="get-a-quote.html" class="btn-action btn-primary nav-cta">Get a Quote</a>
         </div>
         <div class="hamburger"><span></span><span></span><span></span></div>
     </nav>
-    <div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="tel:+918148410102">Call: +91 81484 10102</a><a href="contact.html">Get a Quote</a></div>
-
-    <div class="page-banner">
-        <h1 class="banner-title">Our <span style="color:var(--green-action);">Projects</span></h1>
-        <p class="banner-sub">Every project tells a story of vision, craftsmanship, and trust. Explore our journey through these builds.</p>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#services">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="tel:+918148410102" style="font-weight: 700;">Call: +91 81484 10102</a>
+        <a href="get-a-quote.html" class="mobile-cta">Get a Quote</a>
     </div>
 
-    <section id="rp-residency" class="proj-split  reveal">
-        <div class="proj-split__info">
-            <span class="proj-chip completed">Completed</span>
-            <h2 class="proj-split__title">RP Residency</h2>
-            <p class="proj-split__subtitle">Full Construction & Interior · Chennai</p>
-            <p class="proj-split__story">Maximizing natural light while maintaining privacy in a densely populated Chennai neighborhood. The structural framework blends seamlessly with an elegant facade.</p>
-        </div>
-        <div class="proj-split__gallery">
-            <div class="proj-split__scroll">
-                    <div class="scroll-img"><img src="assets/images/projects/3D%20Elevation/front%20view.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/3D%20Elevation/RP%20Kitchen%20Interior.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/3D%20Elevation/RP.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.36%20PM.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.37%20PM.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.37%20PM%20%281%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.37%20PM%20%282%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.37%20PM%20%283%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.37%20PM%20%284%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.37%20PM%20%285%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.37%20PM%20%286%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.38%20PM.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.38%20PM%20%281%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.38%20PM%20%282%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.38%20PM%20%283%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.38%20PM%20%284%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.38%20PM%20%285%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.50.38%20PM%20%286%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/IMG_20240909_124901998_HDR.jpg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/IMG_20240910_090307100_HDR.jpg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/IMG_20241029_112233660_HDR.jpg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/IMG_20241029_112251568_HDR.jpg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP-Roof-Teracotta%20Tiles%20laying%20work.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP-Roof-Teracotta%20Tiles%20laying%20work2.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/IMG_20250129_114501268.jpg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/IMG_20250204_105906153.jpg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.49%20PM.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.49%20PM%20%281%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.49%20PM%20%282%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.51%20PM.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.51%20PM%20%281%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.51%20PM%20%282%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.51%20PM%20%283%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.52%20PM.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.52%20PM%20%281%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.52%20PM%20%282%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.52%20PM%20%283%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.52%20PM%20%284%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.52%20PM%20%285%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.52%20PM%20%286%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.52%20PM%20%287%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.52%20PM%20%288%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.52%20PM%20%289%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.52%20PM%20%2810%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.52%20PM%20%2811%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.53%20PM.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.53%20PM%20%281%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.53%20PM%20%282%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.53%20PM%20%283%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-29%20at%2011.53.53%20PM%20%284%29.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP%20night%20view.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/WhatsApp%20Image%202026-04-23%20at%2011.52.44%20PM.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP1.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP3.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP4.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP5.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP6.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP7.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP8.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP-9.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP%2010.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP-family.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP-Living%20Area.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP-Dining%20Area.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP-MB-Wardrobe.jpeg" alt="RP Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/RP/RP-MBR-Bathroom.jpeg" alt="RP Residency" loading="lazy"></div>
+    <header class="projects-header">
+        <h1>Our Masterpieces</h1>
+        <p>A comprehensive gallery of our completed and ongoing construction projects across Tamil Nadu and Bangalore.</p>
+    </header>
+
+    <!-- RP Residency -->
+    <section id="rp-residency" class="project-section project-editorial">
+        <div class="project-info reveal">
+            <h2>RP Residency</h2>
+            <div class="project-badges" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Full Construction & Interior Design
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Chennai
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.1); color: #16a34a; padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(34, 197, 94, 0.2); letter-spacing: 0.5px; text-transform: uppercase;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Completed
+                </span>
             </div>
+            <p style="margin-bottom: 1rem; text-align: justify;">For RP Residency, the main idea was to create a home that beautifully blends modern city living with the warmth and simplicity of a traditional village setup. While the ground and first floor were designed with a modern style, the terrace was planned with a more traditional village-inspired atmosphere, giving the family the experience of both worlds within the same home.</p>
+            <p style="margin-bottom: 1rem; text-align: justify;">Since the family deeply loves nature, we made sure to include greenery wherever possible. Every seating area was thoughtfully complemented with garden spaces and plants to create a calm and refreshing environment. We also focused on making maximum use of every corner of the house, including the white spaces, so the entire design feels balanced, functional, and visually pleasing.</p>
+            <p style="margin-bottom: 1rem; text-align: justify;">The home has several relaxing corners designed for comfort and peaceful living. An east-facing bay window in the living area creates a cozy space to unwind with beautiful natural light during the mornings. In the master bedroom, a west-facing bay window creates a calm and peaceful corner inside the room. The master bedroom also opens into a south-facing balcony through a large French window, bringing in openness, ventilation, and a strong connection to the outdoors.</p>
+            <p style="margin-bottom: 1rem; text-align: justify;">The terrace was designed as a lively green space for the family to build their own organic garden and enjoy flowering plants around them. The thinnai was created as a way to connect the open kitchen with the organic garden area, creating a beautiful transition between spaces. Sitting in the thinnai offers a peaceful view of the entire terrace and the workspace nearby.</p>
+            <p style="margin-bottom: 1rem; text-align: justify;">The workspace itself was thoughtfully planned as a creative and multifunctional area. It includes a comfortable work setup, a gaming space, a balcony, and a bay window, making the room both productive and relaxing at the same time.</p>
+            <p style="text-align: justify;">From the terrace, an additional staircase leads to the upper terrace level, which offers a spectacular panoramic view of the surroundings and completes the overall living experience of the home.</p>
+        </div>
+        <div class="project-grid">
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/RP1.jpeg" alt="RP Elevation" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/IMG_20240909_124901998_HDR.jpg" alt="RP Interior" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/IMG_20240910_090307100_HDR.jpg" alt="RP HDR Detail" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/RP-family.jpeg" alt="RP Family Area" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/RP-Dining Area.jpeg" alt="RP Dining" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/RP-Living Area.jpeg" alt="RP Living" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/RP night view.jpeg" alt="RP Night View" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/RP-Roof-Teracotta Tiles laying work.jpeg" alt="RP Construction" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/RP-Roof-Teracotta Tiles laying work2.jpeg" alt="RP Construction" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/WhatsApp Image 2026-04-29 at 11.53.52 PM.jpeg" alt="RP Construction" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/WhatsApp Image 2026-04-29 at 11.53.51 PM.jpeg" alt="RP Construction" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/WhatsApp Image 2026-04-29 at 11.53.53 PM.jpeg" alt="RP Construction" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/IMG_20241029_112233660_HDR.jpg" alt="RP Detail View" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/IMG_20241029_112251568_HDR.jpg" alt="RP Architectural Detail" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/IMG_20250129_114501268.jpg" alt="RP Completion Phase" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/RP6.jpeg" alt="RP Structure" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/RP 10.jpeg" alt="RP Terrace" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/RP-MB-Wardrobe.jpeg" alt="RP Bedroom" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/RP-MBR-Bathroom.jpeg" alt="RP Bathroom" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/RP/WhatsApp Image 2026-04-29 at 11.53.52 PM (10).jpeg" alt="RP Detail View" loading="lazy" decoding="async"></div>
         </div>
     </section>
 
-    <section id="gnaneshwar-villa" class="proj-split proj-split--alt reveal">
-        <div class="proj-split__info">
-            <span class="proj-chip completed">Completed</span>
-            <h2 class="proj-split__title">Gnaneshwar Villa</h2>
-            <p class="proj-split__subtitle">Wood Work · Bangalore</p>
-            <p class="proj-split__story">Careful planning around local climate with advanced waterproofing. The client envisioned a grand, imposing structure that stands the test of time.</p>
-        </div>
-        <div class="proj-split__gallery">
-            <div class="proj-split__scroll">
-                    <div class="scroll-img"><img src="assets/images/projects/Gnaneshwar%20Residency-Bangalore/Blr.jpeg" alt="Gnaneshwar Villa" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Gnaneshwar%20Residency-Bangalore/FB_IMG_1694750623895.jpg" alt="Gnaneshwar Villa" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Gnaneshwar%20Residency-Bangalore/FB_IMG_1694750629698.jpg" alt="Gnaneshwar Villa" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Gnaneshwar%20Residency-Bangalore/FB_IMG_1694750637729.jpg" alt="Gnaneshwar Villa" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Gnaneshwar%20Residency-Bangalore/FB_IMG_1694750643859.jpg" alt="Gnaneshwar Villa" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Gnaneshwar%20Residency-Bangalore/FB_IMG_1694750700179.jpg" alt="Gnaneshwar Villa" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Gnaneshwar%20Residency-Bangalore/FB_IMG_1694750718605.jpg" alt="Gnaneshwar Villa" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Gnaneshwar%20Residency-Bangalore/FB_IMG_1694750726325.jpg" alt="Gnaneshwar Villa" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Gnaneshwar%20Residency-Bangalore/FB_IMG_1694750730146.jpg" alt="Gnaneshwar Villa" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Gnaneshwar%20Residency-Bangalore/FB_IMG_1694750735384.jpg" alt="Gnaneshwar Villa" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Gnaneshwar%20Residency-Bangalore/FB_IMG_1694750741175.jpg" alt="Gnaneshwar Villa" loading="lazy"></div>
+    <!-- Gnaneshwar Villa -->
+    <section id="gnaneshwar-villa" class="project-section">
+        <div class="project-info reveal">
+            <h2>Gnaneshwar Villa</h2>
+            <div class="project-badges" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Premium Wood Work & Interiors
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Bangalore
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.1); color: #16a34a; padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(34, 197, 94, 0.2); letter-spacing: 0.5px; text-transform: uppercase;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Completed
+                </span>
             </div>
+            <p>Crafting warm, high-end living spaces with artisan woodwork.</p>
+        </div>
+        <div class="project-grid">
+            <div class="grid-item reveal"><img src="assets/images/projects/Gnaneshwar Residency-Bangalore/Blr.jpeg" alt="Villa Exterior" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Gnaneshwar Residency-Bangalore/FB_IMG_1694750623895.jpg" alt="Interior Detail" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Gnaneshwar Residency-Bangalore/FB_IMG_1694750629698.jpg" alt="Teak Work" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Gnaneshwar Residency-Bangalore/FB_IMG_1694750637729.jpg" alt="Bedroom detail" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Gnaneshwar Residency-Bangalore/FB_IMG_1694750643859.jpg" alt="Modular Kitchen" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Gnaneshwar Residency-Bangalore/FB_IMG_1694750700179.jpg" alt="Wardrobe" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Gnaneshwar Residency-Bangalore/FB_IMG_1694750718605.jpg" alt="Foyer" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Gnaneshwar Residency-Bangalore/FB_IMG_1694750726325.jpg" alt="Ceiling Work" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Gnaneshwar Residency-Bangalore/FB_IMG_1694750730146.jpg" alt="Dining Room" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Gnaneshwar Residency-Bangalore/FB_IMG_1694750735384.jpg" alt="Wood Panel Detail" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Gnaneshwar Residency-Bangalore/FB_IMG_1694750741175.jpg" alt="Living Hall" loading="lazy" decoding="async"></div>
         </div>
     </section>
 
-    <section id="anil-residency" class="proj-split  reveal">
-        <div class="proj-split__info">
-            <span class="proj-chip completed">Completed</span>
-            <h2 class="proj-split__title">Anil Residency</h2>
-            <p class="proj-split__subtitle">Interior Design · Trivandrum</p>
-            <p class="proj-split__story">Blending traditional Kerala architecture with modern structural integrity. A proud moment watching the final majestic form revealed.</p>
-        </div>
-        <div class="proj-split__gallery">
-            <div class="proj-split__scroll">
-                    <div class="scroll-img"><img src="assets/images/projects/Anil%20Residency%20-Trivandrum/Anil%20home.jpeg" alt="Anil Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Anil%20Residency%20-Trivandrum/Entrance.png" alt="Anil Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Anil%20Residency%20-Trivandrum/IMG-20230406-WA0029.jpg" alt="Anil Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Anil%20Residency%20-Trivandrum/IMG-20230501-WA0001.jpg" alt="Anil Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Anil%20Residency%20-Trivandrum/IMG-20230501-WA0002%281%29.jpg" alt="Anil Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Anil%20Residency%20-Trivandrum/IMG-20230501-WA0003.jpg" alt="Anil Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Anil%20Residency%20-Trivandrum/IMG-20230501-WA0005.jpg" alt="Anil Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Anil%20Residency%20-Trivandrum/IMG-20230503-WA0000.jpg" alt="Anil Residency" loading="lazy"></div>
+    <!-- Brijith Residency -->
+    <section id="brijith-residency" class="project-section project-editorial">
+        <div class="project-info reveal">
+            <h2>Brijith Residency</h2>
+            <div class="project-badges" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Full Construction
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Tenkasi
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.1); color: #16a34a; padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(34, 197, 94, 0.2); letter-spacing: 0.5px; text-transform: uppercase;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Completed
+                </span>
             </div>
+            <p style="margin-bottom: 1rem; text-align: justify;">While working on this home, we wanted every part of it to feel connected to the beauty of Tenkasi. Since the place is known for its pleasant drizzles and beautiful mountain views, we planned two balconies, one in the front and one at the back, so the family could enjoy the weather and scenery peacefully. We also used large 5-foot French windows throughout the house to bring in more natural light and create an open, airy feeling inside the home.</p>
+            <p style="margin-bottom: 1rem; text-align: justify;">Another special element in this project is the indoor garden space designed behind the staircase. We wanted even the interiors to feel fresh and connected to nature. The first two staircase steps were intentionally designed wider, around 7 feet long, so they could also work as a comfortable seating space. It creates a cozy spot in the house that feels very natural and relaxing.</p>
+            <p style="text-align: justify;">For the elevation, Jaali elements were used to enhance the overall aesthetic of the home. To make the design feel more balanced and visually appealing from every angle, the same Jaali detail was continued onto one corner of the structure as well. This small addition greatly improved the side elevation and gave the house a unique architectural character.</p>
+        </div>
+        <div class="project-grid">
+            <div class="grid-item reveal"><img src="assets/images/projects/Brijith Residency-Tenkasi/Tenkasi 1.jpeg" alt="Residency Facade" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Brijith Residency-Tenkasi/Tenkasi3.jpeg" alt="Side View" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Brijith Residency-Tenkasi/Tenkasi 4.jpeg" alt="Structural detail" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Brijith Residency-Tenkasi/Tenkasi 5.jpeg" alt="Entrance Elevation" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Brijith Residency-Tenkasi/IMG_20231201_100021898_HDR.jpg" alt="Main Arch" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Brijith Residency-Tenkasi/IMG_20231031_170344557_HDR.jpg" alt="Evening Shot" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Brijith Residency-Tenkasi/3.jpeg" alt="Villa Exterior View" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Brijith Residency-Tenkasi/IMG_20231010_175630334.jpg" alt="Construction detail 1" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Brijith Residency-Tenkasi/IMG_20231011_171244552.jpg" alt="Construction detail 2" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Brijith Residency-Tenkasi/IMG_20240103_102347899_HDR(1).jpg" alt="Interior Progress" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Brijith Residency-Tenkasi/IMG_20240105_080753205_HDR.jpg" alt="Finishing Work" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Brijith Residency-Tenkasi/IMG_20240508_171316694_HDR.jpg" alt="Completed Interior" loading="lazy" decoding="async"></div>
         </div>
     </section>
 
-    <section id="brijith-residency" class="proj-split proj-split--alt reveal">
-        <div class="proj-split__info">
-            <span class="proj-chip completed">Completed</span>
-            <h2 class="proj-split__title">Brijith Residency</h2>
-            <p class="proj-split__subtitle">Full Construction · Tenkasi</p>
-            <p class="proj-split__story">Distinct weather patterns and robust local materials. The sprawling layout required a massive, continuous slab pour — a testament to our engineering.</p>
-        </div>
-        <div class="proj-split__gallery">
-            <div class="proj-split__scroll">
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/3.jpeg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20231010_175630334.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20231010_175640122.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20231011_171244552.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20231022_185030433.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20231022_185034553.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20231022_193225765%281%29.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20231022_193225765.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20231031_170344557_HDR.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20231201_095111324_HDR.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20231201_100021898_HDR.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240103_102347899_HDR%281%29.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240104_152335579_HDR%281%29.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240105_080753205_HDR.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240508_164713036.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240508_164938905_HDR.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240508_171316694_HDR.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240508_171344771.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240508_172728243_HDR.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240508_172910780.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240508_173554340_HDR.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240508_173822058.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240508_173827252.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240508_173921790_HDR.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240508_174017921_HDR.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240508_174021270.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/IMG_20240508_175321933_HDR.jpg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/parlour.png" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/Tenkasi%201.jpeg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/Tenkasi%204.jpeg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/Tenkasi%205.jpeg" alt="Brijith Residency" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Brijith%20Residency-Tenkasi/Tenkasi3.jpeg" alt="Brijith Residency" loading="lazy"></div>
+    <!-- Vihaan Homes -->
+    <section id="vihaan-homes" class="project-section">
+        <div class="project-info reveal">
+            <h2>Vihaan Homes</h2>
+            <div class="project-badges" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Community Development
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Hosur
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(59, 130, 246, 0.1); color: #2563eb; padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(59, 130, 246, 0.2); letter-spacing: 0.5px; text-transform: uppercase;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    Ongoing
+                </span>
             </div>
+            <p>Modern community living designed for comfort and future-ready infrastructure. Explore our site progress and architectural vision.</p>
+        </div>
+        <div class="project-grid">
+            <div class="grid-item reveal"><img src="assets/images/projects/Vihaan Homes/vihaan homes.jpeg" alt="Vihaan Homes Concept" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Vihaan Homes/vihaan homes-new.jpeg" alt="Vihaan Homes Site" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Vihaan Homes/IMG_20251103_093001245_HDR.jpg" alt="Vihaan Homes Progress 1" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Vihaan Homes/IMG_20251116_072639595_HDR.jpg" alt="Vihaan Homes Progress 2" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Vihaan Homes/IMG_20260209_160518699.jpg" alt="Vihaan Homes Progress 3" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Vihaan Homes/IMG_20260210_181821183.jpg" alt="Vihaan Homes Progress 4" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Vihaan Homes/IMG_20260219_155830048.jpg" alt="Vihaan Homes Progress 5" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Vihaan Homes/IMG_20260327_140123306_HDR.jpg" alt="Vihaan Homes Progress 6" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Vihaan Homes/IMG_20260415_102900909_HDR.jpg" alt="Vihaan Homes Site View" loading="lazy" decoding="async"></div>
         </div>
     </section>
 
-    <section id="adhira-beauty" class="proj-split  reveal">
-        <div class="proj-split__info">
-            <span class="proj-chip completed">Completed</span>
-            <h2 class="proj-split__title">Adhira Beauty Parlour</h2>
-            <p class="proj-split__subtitle">Commercial · Nagercoil</p>
-            <p class="proj-split__story">Specialized MEP integration for a salon — water and power routing perfectly concealed within the sleek interior design.</p>
-        </div>
-        <div class="proj-split__gallery">
-            <div class="proj-split__scroll">
-                    <div class="scroll-img"><img src="assets/images/projects/Adhira%20Parlour/1.png" alt="Adhira Beauty Parlour" loading="lazy"></div>
+    <!-- Anil Residency -->
+    <section id="anil-residency" class="project-section project-editorial">
+        <div class="project-info reveal">
+            <h2>Anil Residency</h2>
+            <div class="project-badges" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Interior Design
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Trivandrum
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.1); color: #16a34a; padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(34, 197, 94, 0.2); letter-spacing: 0.5px; text-transform: uppercase;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Completed
+                </span>
             </div>
+            <p style="margin-bottom: 1rem; text-align: justify;">For Anil Residency, we worked on the interior design with a strong focus on space optimization. Since the available space was comparatively limited, the challenge was to create interiors that felt open, functional, and aesthetically balanced without making the spaces look crowded.</p>
+            <p style="text-align: justify;">We approached the project with a minimalistic design style, carefully planning every element to make the best use of the available area while maintaining a clean and elegant look throughout the home. The color palette was also selected thoughtfully to complement the exterior design of the house, helping the interiors and exteriors feel visually connected and harmonious.</p>
+        </div>
+        <div class="project-grid">
+            <div class="grid-item reveal"><img src="assets/images/projects/Anil Residency -Trivandrum/Anil home.jpeg" alt="Anil Residency" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Anil Residency -Trivandrum/IMG-20230406-WA0029.jpg" alt="Anil Interior 1" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Anil Residency -Trivandrum/IMG-20230501-WA0001.jpg" alt="Anil Interior 2" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Anil Residency -Trivandrum/IMG-20230501-WA0002(1).jpg" alt="Anil Interior 3" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Anil Residency -Trivandrum/IMG-20230501-WA0003.jpg" alt="Anil Interior 4" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Anil Residency -Trivandrum/IMG-20230501-WA0005.jpg" alt="Anil Interior 5" loading="lazy" decoding="async"></div>
+            <div class="grid-item reveal"><img src="assets/images/projects/Anil Residency -Trivandrum/IMG-20230503-WA0000.jpg" alt="Anil Architectural detail" loading="lazy" decoding="async"></div>
         </div>
     </section>
 
-    <section id="vihaan-homes" class="proj-split proj-split--alt reveal">
-        <div class="proj-split__info">
-            <span class="proj-chip ongoing">Ongoing</span>
-            <h2 class="proj-split__title">Vihaan Homes</h2>
-            <p class="proj-split__subtitle">Residential · Hosur</p>
-            <p class="proj-split__story">Unique cantilevered sections requiring intense structural calculations. This ongoing project showcases our commitment to architectural innovation.</p>
-        </div>
-        <div class="proj-split__gallery">
-            <div class="proj-split__scroll">
-                    <div class="scroll-img"><img src="assets/images/projects/Vihaan%20Homes/vihaan%20homes-new.jpeg" alt="Vihaan Homes" loading="lazy"></div>
-                    <div class="scroll-img"><img src="assets/images/projects/Vihaan%20Homes/vihaan%20homes.jpeg" alt="Vihaan Homes" loading="lazy"></div>
+    <!-- Adhira Beauty Parlour -->
+    <section id="adhira-beauty" class="project-section">
+        <div class="project-info reveal">
+            <h2>Adhira Beauty Parlour</h2>
+            <div class="project-badges" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Commercial Interior
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #f8fafc; color: var(--blue-dark, #0f172a); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid #e2e8f0; letter-spacing: 0.3px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green, #22c55e)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Nagercoil
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.1); color: #16a34a; padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(34, 197, 94, 0.2); letter-spacing: 0.5px; text-transform: uppercase;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Completed
+                </span>
             </div>
+            <p>High-end functional environment for a premium salon experience.</p>
+        </div>
+        <div class="project-grid">
+            <div class="grid-item reveal"><img src="assets/images/projects/Adhira Parlour/1.png" alt="Adhira Interior" loading="lazy" decoding="async"></div>
         </div>
     </section>
 
-    <div class="cta-banner reveal">
-        <div class="cta-text"><h2>Ready to Start <span>Your Project?</span></h2><p>Let's build your dream together. Contact our team today.</p></div>
-        <div class="cta-actions"><a href="contact.html" class="btn-white">Get a Free Quote</a></div>
-    </div>
-
-    <footer style="background:var(--blue-dark);color:#fff;border-top:none;">
-        <div class="footer-top" style="display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:4rem;padding:5rem 5%;max-width:1400px;margin:0 auto;">
-            <div class="footer-brand"><a href="index.html" class="logo"><img src="assets/logo/main-logo.png" alt="Vihaan Constructions" class="footer-logo" style="filter:brightness(0) invert(1);"></a><p style="color:rgba(255,255,255,0.7);font-size:1rem;line-height:1.6;margin-top:1rem;max-width:300px;">To make quality home construction accessible for all without compromising on strength, safety, or design.</p></div>
-            <div class="footer-col"><h4 style="color:#fff;margin-bottom:1.5rem;font-size:1.2rem;">Pages</h4><ul style="list-style:none;padding:0;"><li style="margin-bottom:0.8rem;"><a href="index.html" style="color:rgba(255,255,255,0.8);text-decoration:none;font-weight:500;">Home</a></li><li style="margin-bottom:0.8rem;"><a href="about.html" style="color:rgba(255,255,255,0.8);text-decoration:none;font-weight:500;">About Us</a></li><li style="margin-bottom:0.8rem;"><a href="services.html" style="color:rgba(255,255,255,0.8);text-decoration:none;font-weight:500;">Services</a></li><li style="margin-bottom:0.8rem;"><a href="projects.html" style="color:rgba(255,255,255,0.8);text-decoration:none;font-weight:500;">Projects</a></li><li style="margin-bottom:0.8rem;"><a href="contact.html" style="color:rgba(255,255,255,0.8);text-decoration:none;font-weight:500;">Contact</a></li></ul></div>
-            <div class="footer-col"><h4 style="color:#fff;margin-bottom:1.5rem;font-size:1.2rem;">Services</h4><ul style="list-style:none;padding:0;"><li style="margin-bottom:0.8rem;"><a href="services.html#residential" style="color:rgba(255,255,255,0.8);text-decoration:none;font-weight:500;">Residential</a></li><li style="margin-bottom:0.8rem;"><a href="services.html#commercial" style="color:rgba(255,255,255,0.8);text-decoration:none;font-weight:500;">Commercial</a></li><li style="margin-bottom:0.8rem;"><a href="services.html#interior" style="color:rgba(255,255,255,0.8);text-decoration:none;font-weight:500;">Interior Design</a></li><li style="margin-bottom:0.8rem;"><a href="services.html#renovation" style="color:rgba(255,255,255,0.8);text-decoration:none;font-weight:500;">Renovation</a></li></ul></div>
-            <div class="footer-col"><h4 style="color:#fff;margin-bottom:1.5rem;font-size:1.2rem;">Contact</h4><ul style="list-style:none;padding:0;"><li style="margin-bottom:0.8rem;"><a href="tel:+918148410102" style="color:rgba(255,255,255,0.8);text-decoration:none;font-weight:500;">+91 81484 10102</a></li><li style="margin-bottom:0.8rem;"><a href="mailto:vihaanconstructions.india@gmail.com" style="color:rgba(255,255,255,0.8);text-decoration:none;font-weight:500;">vihaanconstructions.india@gmail.com</a></li></ul></div>
+    <!-- Footer (Global) -->
+    <footer style="background: var(--blue-dark); padding: 80px 0 0;">
+        <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 4rem; padding: 0 5% 60px; max-width: 1400px; margin: 0 auto;">
+            <div class="footer-col">
+                <img src="assets/logo/main-logo.png" alt="Vihaan Constructions" style="height: 60px; filter: brightness(0) invert(1);" loading="lazy" decoding="async">
+                <p class="footer-desc" style="color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.6; margin-top: 1rem; max-width: 300px;">To make quality home construction accessible for all without compromising on strength, safety, or design.</p>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 1.2rem;">Pages</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="index.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Home</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="index.html#about" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">About Us</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="index.html#services" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Services</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="projects.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Projects</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="get-a-quote.html" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">Get a Quote</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 1.2rem;">Services</h4>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">Residential, Commercial, Interior Design, and Renovation across Tamil Nadu & Bangalore.</p>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 1.2rem;">Contact</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="tel:+918148410102" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">+91 81484 10102</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="mailto:vihaanconstructions.india@gmail.com" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; font-weight: 500;">vihaanconstructions.india@gmail.com</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-bottom" style="display:flex;justify-content:space-between;align-items:center;padding:1.5rem 5%;border-top:1px solid rgba(255,255,255,0.1);background:rgba(0,0,0,0.2);color:rgba(255,255,255,0.6);font-size:0.9rem;">
-            <div>&copy; 2026 Vihaan Constructions. All rights reserved.</div>
-            <div style="font-weight:600;color:#fff;">Built with purpose. Delivered with pride.</div>
+        <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+            <div class="footer-copy">© 2026 Vihaan Constructions. All rights reserved.</div>
+            <div class="footer-tagline" style="font-weight: 600; color: #fff;">Built with purpose. Delivered with pride.</div>
         </div>
     </footer>
+
     <script src="main.js"></script>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918148410102" target="_blank" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+        <img src="assets/300768190_383340503990757_1334850925137629076_n/ChatOnWhatsAppButton/WhatsAppButtonGreenLarge.svg" alt="Chat on WhatsApp" loading="lazy" decoding="async">
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
 </body>
 </html>
